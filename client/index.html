@@ -4,11 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blood Bank Management</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Welcome to Blood Bank System</h1>
+  <h1>Blood Bank Management System</h1>
+
+  <h2 class="section-heading">Donor Inventory</h2>
+  <div id="inventorySummary">Total Donors: <span id="donorCount">0</span></div>
+
+  <h2 class="section-heading">Add Donor</h2>
+  <form id="donorForm">
+    <input type="text" id="name" placeholder="Donor Name" required />
+    <input type="text" id="bloodGroup" placeholder="Blood Group" required />
+    <button type="button" id="submitBtn">Add</button>
+  </form>
+
+  <h2 class="section-heading">Donor List</h2>
   <div id="donorList"></div>
+
   <script type="module" src="script.js"></script>
 </body>
 </html>
