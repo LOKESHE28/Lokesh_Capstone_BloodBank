@@ -74,4 +74,4 @@ Matching high-fidelity design and working update/delete logic
 
 Deployment, UI polish, and feature validation will be completed by Day 5
 
-
+Deployed link : https://bloodbank-lokesh.netlify.app/
