@@ -8,4 +8,8 @@ const sampleDonor = {
   bloodGroup: "O+"
 };
 
-donorList.innerHTML = createDonorCard(sampleDonor);
+donorList.innerHTML = '';
+
+const wrapper = document.createElement('div');
+wrapper.innerHTML = createDonorCard(sampleDonor);
+donorList.appendChild(wrapper.firstElementChild);
