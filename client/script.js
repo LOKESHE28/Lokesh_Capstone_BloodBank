@@ -22,15 +22,7 @@ function renderDonors() {
     const gender = document.createElement('p');
     gender.textContent = `Gender: ${donor.gender}`;
 
-    const editBtn = document.createElement('button');
-    editBtn.textContent = 'Edit';
-    editBtn.addEventListener('click', () => editDonor(index));
-
-    const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = 'Delete';
-    deleteBtn.addEventListener('click', () => deleteDonor(index));
-
-    card.append(name, group, age, gender, editBtn, deleteBtn);
+    card.append(name, group, age, gender);
     list.appendChild(card);
   });
 }
@@ -39,39 +31,6 @@ function addDonor(name, age, gender, bloodGroup) {
   donors.push({ name, age, gender, bloodGroup });
   localStorage.setItem('donors', JSON.stringify(donors));
   renderDonors();
-}
-
-function deleteDonor(index) {
-  donors.splice(index, 1);
-  localStorage.setItem('donors', JSON.stringify(donors));
-  renderDonors();
-}
-
-function editDonor(index) {
-  const donor = donors[index];
-  document.getElementById('name').value = donor.name;
-  document.getElementById('age').value = donor.age;
-  document.getElementById('gender').value = donor.gender;
-  document.getElementById('bloodGroup').value = donor.bloodGroup;
-  document.getElementById('submitBtn').innerText = 'Update';
-
-  document.getElementById('submitBtn').onclick = function () {
-    donors[index] = {
-      name: document.getElementById('name').value,
-      age: document.getElementById('age').value,
-      gender: document.getElementById('gender').value,
-      bloodGroup: document.getElementById('bloodGroup').value
-    };
-    localStorage.setItem('donors', JSON.stringify(donors));
-    renderDonors();
-    resetForm();
-  };
-}
-
-function resetForm() {
-  document.getElementById('donorForm').reset();
-  document.getElementById('submitBtn').innerText = 'Add';
-  document.getElementById('submitBtn').onclick = handleSubmit;
 }
 
 function handleSubmit() {
