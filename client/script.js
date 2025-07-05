@@ -62,12 +62,12 @@ function deleteDonor(index) {
 
 function handleSubmit() {
   const name = document.getElementById('name').value.trim();
-  const age = document.getElementById('age').value.trim();
+  const age = parseInt(document.getElementById('age').value.trim());
   const gender = document.getElementById('gender').value;
   const bloodGroup = document.getElementById('bloodGroup').value.trim();
 
-  if (!name || !age || !gender || !bloodGroup) {
-    alert("Please fill in all fields.");
+  if (!name || isNaN(age) || age <= 0 || !gender || !bloodGroup) {
+    alert("Please enter valid donor details.");
     return;
   }
 
