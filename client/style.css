@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f0f4f8;
@@ -7,8 +8,42 @@ body {
 }
 
 h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: white; /* Updated to ensure visibility on red header */
+}
+
+/* Header Styling */
+.main-header {
+  background-color: #e74c3c;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 4px solid #c0392b;
+}
+
+.main-footer {
+  background-color: #e74c3c;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 14px;
+  border-top: 4px solid #c0392b;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.section-heading {
+  font-size: 22px;
+  font-weight: bold;
   color: #2c3e50;
-  margin-bottom: 30px;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
 form {
@@ -20,7 +55,7 @@ form {
   display: inline-block;
 }
 
-input {
+input, select {
   margin: 10px 5px;
   padding: 10px;
   width: 200px;
@@ -48,7 +83,7 @@ button:hover {
 
 .donor-card {
   background-color: #ffffff;
-  border: 1px solid #ccc;
+  border: 2px solid #e74c3c;
   border-radius: 12px;
   padding: 15px;
   margin: 10px auto;
@@ -67,27 +102,4 @@ button:hover {
   margin: 8px 0;
   font-size: 14px;
   color: #555;
-}
-
-
-/* Red border for emphasis */
-.donor-card {
-  border: 2px solid #e74c3c; /* Red border */
-}
-
-/* Homepage heading styling */
-h1 {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #e74c3c; /* Red header color */
-}
-
-/* Section headings */
-.section-heading {
-  font-size: 22px;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-top: 30px;
-  margin-bottom: 10px;
 }
